@@ -1,11 +1,12 @@
 package main
 
 import (
-	examplefunctions "github.com/sub-rat/goclass_morning/example_functions"
+	exapmle2array "github.com/sub-rat/goclass_morning/example2_array"
 )
 
 func main() {
 	// initials.Init()
 	// loopexample.InitLoopExample()
-	examplefunctions.InitExampleFunctions()
+	// examplefunctions.InitSwap()
+	exapmle2array.Init()
 }

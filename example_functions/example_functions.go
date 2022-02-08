@@ -22,7 +22,7 @@ func InitExampleFunctions() {
 	fmt.Println("sum = ", s)
 	x, y := "kathmandu", "Dhulikhel"
 	fmt.Println(x, y)
-	x, y = swap(x, y)
+	// x, y = swap(x, y)
 	fmt.Println(x, y)
 }
 
@@ -34,6 +34,6 @@ func sum(a int, b int) (int, error) {
 	return sum, nil
 }
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
+// func swap(x, y string) (string, string) {
+// 	return y, x
+// }
