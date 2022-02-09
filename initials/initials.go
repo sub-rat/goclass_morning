@@ -9,7 +9,7 @@ const PI = 3.14 // constant global variables
 
 var i, j, k = 2, 2, "abc" // global variables
 
-func nit() {
+func Init() {
 	x := 10
 	fmt.Println("hello go")
 	var age uint8 = 100 // memory 8 bit= 1 byte ; local variable
