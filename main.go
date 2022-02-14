@@ -1,8 +1,7 @@
 package main
 
 import (
-	exampledatastructure "github.com/sub-rat/goclass_morning/example_datastructure"
-	examplefunctions "github.com/sub-rat/goclass_morning/example_functions"
+	examplestructs "github.com/sub-rat/goclass_morning/example_structs"
 )
 
 func main() {
@@ -10,6 +9,9 @@ func main() {
 	// loopexample.InitLoopExample()
 	// examplefunctions.InitSwap()
 	// exapmle2array.Init()
-	exampledatastructure.InitDataStructure()
-	examplefunctions.InitVariadicFunction()
+	// exampledatastructure.InitDataStructure()
+	// examplefunctions.InitVariadicFunction()
+	examplestructs.InitExampleStruct()
+
+	// examplefunctions.InitExampleClosures()
 }
