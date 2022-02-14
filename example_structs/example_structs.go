@@ -10,28 +10,54 @@ type address struct {
 	location string
 }
 
+type person struct {
+	id    int
+	name  string
+	phone []string
+}
+
 type student struct {
-	id      int
-	name    string
+	person
 	rollNo  int
 	address map[string]address //
-	phone   []string
+}
+
+type teacher struct {
+	person
+	id              int
+	faculty         string
+	teachingSubject string
+}
+
+type admin struct {
+	person
+	position string
 }
 
 func creatStudent(id int, name string) *student {
 	s := student{
-		id:   id,
-		name: name,
+		person: person{
+			id:   id,
+			name: name,
+		},
 	}
 	return &s
 }
 
-func (s student) Display() {
-	fmt.Println("In Student Display func")
+func (s person) Display() {
+	fmt.Println("In Person Display func")
 	fmt.Println("id = ", s.id)
 	fmt.Println("name = ", s.name)
-	fmt.Println("rollno = ", s.rollNo)
-	fmt.Println("address = ", s.address)
+	// fmt.Println("rollno = ", s.rollNo)
+	// fmt.Println("address = ", s.address)
+}
+
+func (s teacher) Display() {
+	fmt.Println("In Teacher Display func")
+	fmt.Println("id = ", s.id)
+	fmt.Println("name = ", s.name)
+	// fmt.Println("rollno = ", s.rollNo)
+	// fmt.Println("address = ", s.address)
 }
 
 func DisplayStudent(s student) {
@@ -58,18 +84,22 @@ func InitExampleStruct() {
 		},
 	}
 	std1 := student{
-		id:      1,
-		name:    "Ram",
+		person: person{
+			id:    1,
+			name:  "Ram",
+			phone: []string{"9090909090", "89898989"},
+		},
 		rollNo:  1,
 		address: std1Address,
-		phone:   []string{"9090909090", "89898989"},
 	}
 
 	fmt.Printf("%+v\n", std1)
 
 	std2 := student{
-		id:   1,
-		name: "Ram",
+		person: person{
+			id:   1,
+			name: "Ram",
+		},
 	}
 
 	std2.rollNo = 2
@@ -93,5 +123,31 @@ func InitExampleStruct() {
 	// var p *int
 	// p = &a
 	// fmt.Println(*p)
+
+	teacher := teacher{
+		person: person{
+			id:   10,
+			name: "hari",
+		},
+		id:              2,
+		faculty:         "science",
+		teachingSubject: "science",
+	}
+
+	fmt.Println("=========example embeddings==========")
+	fmt.Println(teacher.id)
+	fmt.Println(teacher.person.id)
+	teacher.Display()
+	teacher.person.Display()
+
+	a1 := admin{
+		person: person{
+			id:   4,
+			name: "gopal",
+		},
+		position: "woker1",
+	}
+
+	a1.Display()
 
 }

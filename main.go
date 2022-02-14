@@ -12,6 +12,7 @@ func main() {
 	// exampledatastructure.InitDataStructure()
 	// examplefunctions.InitVariadicFunction()
 	examplestructs.InitExampleStruct()
+	// examplestructs.InitExampleStruct2()
 
 	// examplefunctions.InitExampleClosures()
 }
