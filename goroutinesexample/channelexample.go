@@ -3,7 +3,7 @@ package goroutinesexample
 import "fmt"
 
 func initChannelExample() {
-
+	// varname := make(chan data-type, size)
 	mesChannel := make(chan string, 2)
 	mesChannel <- "Main Thread"
 	// go func() {
