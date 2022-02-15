@@ -16,21 +16,22 @@ type person struct {
 	phone []string
 }
 
+//embedding
 type student struct {
-	person
+	person  // embedding person in strudent
 	rollNo  int
 	address map[string]address //
 }
 
 type teacher struct {
-	person
+	person          // embedding person in teacher
 	id              int
 	faculty         string
 	teachingSubject string
 }
 
 type admin struct {
-	person
+	person   // embedding person in admin
 	position string
 }
 
@@ -44,6 +45,7 @@ func creatStudent(id int, name string) *student {
 	return &s
 }
 
+// methods that is only accessable by instance of person struct
 func (s person) Display() {
 	fmt.Println("In Person Display func")
 	fmt.Println("id = ", s.id)
@@ -52,6 +54,7 @@ func (s person) Display() {
 	// fmt.Println("address = ", s.address)
 }
 
+// methods that is only accessable by instance of teacher struct
 func (s teacher) Display() {
 	fmt.Println("In Teacher Display func")
 	fmt.Println("id = ", s.id)
@@ -60,6 +63,7 @@ func (s teacher) Display() {
 	// fmt.Println("address = ", s.address)
 }
 
+// function
 func DisplayStudent(s student) {
 	fmt.Println("IN Global display func")
 	fmt.Println("id = ", s.id)

@@ -38,6 +38,24 @@ func initSliceExample() {
 	ex2 := []string{"a", "b", "c"}
 	fmt.Println(ex2)
 
+	// var arrayExample4 [2][3]int // [ [ 10,11,12 ], [ 15,24,11 ] ]
+	// for i := 0; i < 2; i++ {
+	// 	for j := 0; j < 3; j++ {
+	// 		arrayExample4[i][j] = i + j
+	// 		fmt.Println(arrayExample4[i][j])
+	// 	}
+	// }
+
 	// Two D with slices
+	twoD := make([][]int, 3)
+
+	for i := 0; i < 3; i++ {
+		ilen := i + 1
+		twoD[i] = make([]int, ilen)
+		for j := 0; j < ilen; j++ {
+			twoD[i][j] = i + j
+		}
+	}
+	fmt.Println("2d slices = ", twoD)
 
 }

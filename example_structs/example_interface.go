@@ -3,7 +3,7 @@ package examplestructs
 import "fmt"
 
 type geometry interface {
-	area() float32
+	area() float32 // method signatures
 	perimeter() float32
 }
 
