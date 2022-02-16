@@ -19,6 +19,7 @@ func main() {
 	// examplefunctions.InitExampleClosures()
 
 	// exampleerrorhandling.InitExampleErrorHandling()
-	goroutinesexample.InitGorountineExample()
+	// goroutinesexample.InitGorountineExample()
+	goroutinesexample.InitChannelExample2()
 
 }
