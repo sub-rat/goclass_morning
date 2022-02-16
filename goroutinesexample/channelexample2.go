@@ -4,12 +4,12 @@ import "fmt"
 
 func InitChannelExample2() {
 
-	// done := make(chan bool, 2)
+	done := make(chan bool, 2)
 
-	// fmt.Println("Starting main thread...")
-	// go worker(done)
-	// <-done
-	// initChannelWithDirection()
+	fmt.Println("Starting main thread...")
+	go worker(done)
+	<-done
+	initChannelWithDirection()
 	initChannelWithSelect()
 }
 
