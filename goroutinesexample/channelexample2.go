@@ -1,6 +1,8 @@
 package goroutinesexample
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func InitChannelExample2() {
 
@@ -23,6 +25,16 @@ func worker(done chan bool) {
 			}
 		}
 		fmt.Println("Value of i =", i)
+	}
+
+	for hour := 0; hour < 24; hour++ {
+		for min := 0; min < 60; min++ {
+			for sec := 0; sec < 60; sec++ {
+				//sec
+			}
+			// min
+		}
+		//hour
 	}
 
 	done <- true

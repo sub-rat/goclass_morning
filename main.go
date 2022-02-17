@@ -3,7 +3,8 @@ package main
 import (
 	_ "github.com/sub-rat/goclass_morning/example2_array"
 	_ "github.com/sub-rat/goclass_morning/example_error_handling"
-	"github.com/sub-rat/goclass_morning/goroutinesexample"
+	"github.com/sub-rat/goclass_morning/example_time_defer_sort"
+	_ "github.com/sub-rat/goclass_morning/goroutinesexample"
 )
 
 func main() {
@@ -20,6 +21,9 @@ func main() {
 
 	// exampleerrorhandling.InitExampleErrorHandling()
 	// goroutinesexample.InitGorountineExample()
-	goroutinesexample.InitChannelExample2()
+	// goroutinesexample.InitChannelExample2()
+	// exampletime.InitExampleTime()
+	// example_time_defer_sort.InitExampleSort()
+	example_time_defer_sort.InitDeferExample()
 
 }
