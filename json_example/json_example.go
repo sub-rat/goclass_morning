@@ -98,4 +98,27 @@ func InitJsonExample() {
 	fmt.Printf("%+v\n", response)
 	jsonExample8, _ := json.Marshal(response)
 	p(string(jsonExample8))
+
+	jsonString := []byte(`{"age":10,"first_name":"Ram","last_name":"Berma","phone":["899089","8989"]}`)
+
+	outputMap := make(map[string]interface{})
+
+	err := json.Unmarshal(jsonString, &outputMap)
+	if err != nil {
+		fmt.Println(err)
+	}
+	p(outputMap)
+	p(outputMap["age"])
+	p(outputMap["first_name"])
+
+	jsonString1 := []byte(`{"age":10,"first_name":"Ram","last_name":"Berma"}`)
+
+	personResponse := person{}
+	err = json.Unmarshal(jsonString1, &personResponse)
+	if err != nil {
+		fmt.Println(err)
+	}
+	p(personResponse)
+	p(personResponse.Age)
+	p(personResponse.FirstName)
 }
