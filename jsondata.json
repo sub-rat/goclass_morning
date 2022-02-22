@@ -1,0 +1,41 @@
+{
+    "page": 1,
+    "data": [
+      {
+        "first_name": "Ram",
+        "last_name": "Berma",
+        "age": 24,
+        "married": false,
+        "address": {
+          "country": "Nepal",
+          "street": "buddhanager"
+        },
+        "phone": [
+          {
+            "home": "989898989898"
+          },
+          {
+            "office": "9090909090"
+          }
+        ]
+      },
+      {
+        "first_name": "Ram",
+        "last_name": "Berma",
+        "age": 24,
+        "married": false,
+        "address": {
+          "country": "Nepal",
+          "street": "buddhanager"
+        },
+        "phone": [
+          {
+            "home": "989898989898"
+          },
+          {
+            "office": "9090909090"
+          }
+        ]
+      }
+    ]
+  }
