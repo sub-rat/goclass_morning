@@ -2,12 +2,13 @@ package json_example
 
 import (
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
 )
 
 type address struct {
-	Country string `json:"country"`
-	Street  string `json:"street"`
+	Country string `json:"country" xml:"country"`
+	Street  string `json:"street" xml:"street"`
 }
 
 type person struct {
@@ -87,7 +88,7 @@ func InitJsonExample() {
 		},
 	}
 
-	response := response{
+	resp := response{
 		Page: 1,
 		Data: []person{
 			person1,
@@ -95,8 +96,8 @@ func InitJsonExample() {
 		},
 	}
 
-	fmt.Printf("%+v\n", response)
-	jsonExample8, _ := json.Marshal(response)
+	fmt.Printf("%+v\n", resp)
+	jsonExample8, _ := json.Marshal(resp)
 	p(string(jsonExample8))
 
 	jsonString := []byte(`{"age":10,"first_name":"Ram","last_name":"Berma","phone":["899089","8989"]}`)
@@ -111,14 +112,33 @@ func InitJsonExample() {
 	p(outputMap["age"])
 	p(outputMap["first_name"])
 
-	jsonString1 := []byte(`{"age":10,"first_name":"Ram","last_name":"Berma"}`)
+	jsonString1 := []byte(`{"page":1,"data":[{"first_name":"Ram","last_name":"Berma","age":0,"address":{"country":"Nepal","street":"Buddhanager"},"phone":[{"home":"9090909"},{"office":"1111111"}]},{"first_name":"Ram1","last_name":"Berma1","age":10,"address":{"country":"Nepal1","street":"Buddhanager1"},"phone":[{"home":"9090909"},{"office":"1111111"}]}]}`)
 
-	personResponse := person{}
-	err = json.Unmarshal(jsonString1, &personResponse)
+	responseList := response{}
+	err = json.Unmarshal(jsonString1, &responseList)
 	if err != nil {
 		fmt.Println(err)
 	}
-	p(personResponse)
-	p(personResponse.Age)
-	p(personResponse.FirstName)
+	p(responseList)
+	p(responseList.Page)
+	// personResponse := responseList.Data[0]
+	// p(personResponse)
+
+	for index, value := range responseList.Data {
+		p(index)
+		p(value)
+		p(value.FirstName)
+		p(value.LastName)
+		p(value.Address)
+	}
+
+	addr := address{
+		Country: "Nepal",
+		Street:  "kathmandu",
+	}
+	outpt, err := xml.MarshalIndent(addr, " ", "  ")
+	if err != nil {
+		p(err)
+	}
+	p(string(outpt))
 }

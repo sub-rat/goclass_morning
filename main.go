@@ -7,7 +7,8 @@ import (
 	_ "github.com/sub-rat/goclass_morning/goroutinesexample"
 
 	_ "github.com/sub-rat/goclass_morning/example_string_functions"
-	"github.com/sub-rat/goclass_morning/json_example"
+	_ "github.com/sub-rat/goclass_morning/json_example"
+	"github.com/sub-rat/goclass_morning/number_parsing"
 )
 
 func main() {
@@ -29,5 +30,6 @@ func main() {
 	// example_time_defer_sort.InitExampleSort()
 	// example_time_defer_sort.InitDeferExample()
 	// example_string_functions.InitExampleStringFunction()
-	json_example.InitJsonExample()
+	// json_example.InitJsonExample()
+	number_parsing.InitNumberParsing()
 }
