@@ -21,7 +21,7 @@ func (r circle) area() float32 {
 }
 
 func (r circle) perimeter() float32 {
-	return 2 * 3.14 * r.radis
+	return 2 * 2.14 * r.radis
 }
 
 func InitExampleStruct2() {

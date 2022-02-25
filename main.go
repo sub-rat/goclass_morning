@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"os"
-
 	_ "github.com/sub-rat/goclass_morning/example2_array"
 	_ "github.com/sub-rat/goclass_morning/example_error_handling"
 	_ "github.com/sub-rat/goclass_morning/example_time_defer_sort"
 	_ "github.com/sub-rat/goclass_morning/examplefilehandling"
 	_ "github.com/sub-rat/goclass_morning/goroutinesexample"
 
+	extestingandbenchmark "github.com/sub-rat/goclass_morning/ex_testing_and_benchmark"
 	_ "github.com/sub-rat/goclass_morning/example_string_functions"
 	_ "github.com/sub-rat/goclass_morning/json_example"
 	_ "github.com/sub-rat/goclass_morning/number_parsing"
@@ -39,9 +37,11 @@ func main() {
 	// examplefilehandling.InitFileHandling("example.txt")
 	// examplefilehandling.InitFileWrite()
 
-	args := os.Args
-	argsWithoutName := args[1:]
-	fmt.Println(args)
-	fmt.Println(argsWithoutName)
+	// args := os.Args
+	// argsWithoutName := args[1:]
+	// fmt.Println(args)
+	// fmt.Println(argsWithoutName)
+
+	extestingandbenchmark.InitTestingAndBenchmark()
 
 }
