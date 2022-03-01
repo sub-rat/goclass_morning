@@ -7,8 +7,9 @@ import (
 	_ "github.com/sub-rat/goclass_morning/examplefilehandling"
 	_ "github.com/sub-rat/goclass_morning/goroutinesexample"
 
-	extestingandbenchmark "github.com/sub-rat/goclass_morning/ex_testing_and_benchmark"
+	_ "github.com/sub-rat/goclass_morning/ex_testing_and_benchmark"
 	_ "github.com/sub-rat/goclass_morning/example_string_functions"
+	httpclientserver "github.com/sub-rat/goclass_morning/http_client_server"
 	_ "github.com/sub-rat/goclass_morning/json_example"
 	_ "github.com/sub-rat/goclass_morning/number_parsing"
 )
@@ -42,6 +43,8 @@ func main() {
 	// fmt.Println(args)
 	// fmt.Println(argsWithoutName)
 
-	extestingandbenchmark.InitTestingAndBenchmark()
+	// extestingandbenchmark.InitTestingAndBenchmark()
+	// httpclientserver.InitHttpClient()
+	httpclientserver.InitHttpServer()
 
 }
